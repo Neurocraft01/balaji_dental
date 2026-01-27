@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Balaji Dental Clinic Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-solid border-[#f0f2f4] dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">dentistry</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-xl font-bold leading-tight tracking-tight">Balaji Dental</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-[#111418] dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-[#111418] dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+<a class="text-[#111418] dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-[#111418] dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="text-[#111418] dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Testimonials</a>
+<a class="text-[#111418] dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Branches</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>Call Now</span>
+</button>
+<button class="hidden md:flex bg-[#f0f2f4] dark:bg-slate-800 text-[#111418] dark:text-white px-5 py-2.5 rounded-lg text-sm font-bold">
+                    Contact
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto">
+<!-- Hero Section -->
+<section class="px-6 py-12 @container">
+<div class="flex flex-col gap-10 @[864px]:flex-row @[864px]:items-center">
+<div class="w-full @[864px]:w-1/2 aspect-video bg-cover bg-center rounded-2xl shadow-xl overflow-hidden" data-alt="Modern dental clinic treatment room interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7vuLng5WXry2F5vzpkkHTDXV5PhURPPC7fkNMMcktuHGRm-vOnjXI2hP8siEYZc1v2WcnFi410YstzHKBTnhYTQEnJrb2dDcevl0f9kgEmLsHoLsjsXmLnU_7h-o0wgfpCh99hmeoE0Vdab96wFO7TDZaw92C3q_F8oH0cHYd_F1k8TUvUij-TizLRMIEeOIIsjHkxGkVyyYq0v1ReEEzjt7qloanO0pL2DLv-fAkTuTwxS8KBu4XdOa0IyBiub9SPNeQZRBdHpkX");'>
+</div>
+<div class="flex flex-col gap-8 @[864px]:w-1/2">
+<div class="flex flex-col gap-4">
+<span class="text-primary font-bold tracking-widest uppercase text-xs">Modern Dental Care</span>
+<h1 class="text-[#111418] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl">
+                            Expert Dental Care for a Brighter Smile
+                        </h1>
+<p class="text-[#617589] dark:text-slate-400 text-lg font-normal leading-relaxed">
+                            Professional dental services by Dr. Kashish and Dr. Nitin across multiple branches. Experience painless dentistry with state-of-the-art modern equipment and compassionate care.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+                            Book Appointment
+                        </button>
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 border-2 border-primary text-primary text-base font-bold hover:bg-primary/5 transition-all">
+                            Our Services
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section Header -->
+<section class="px-6 pt-16 pb-6 text-center">
+<h2 class="text-[#111418] dark:text-white text-3xl font-bold leading-tight tracking-tight mb-2">Our Specialised Services</h2>
+<div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+</section>
+<!-- Services Grid -->
+<section class="px-6 py-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service 1 -->
+<div class="group flex flex-col gap-5 rounded-2xl border border-[#dbe0e6] dark:border-slate-800 bg-white dark:bg-slate-900 p-8 hover:border-primary transition-all hover:shadow-xl">
+<div class="size-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">dentistry</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[#111418] dark:text-white text-xl font-bold leading-tight">Root Canal (RCT)</h3>
+<p class="text-[#617589] dark:text-slate-400 text-base font-normal leading-relaxed">Expert nerve treatment to save your natural tooth with precision, using the latest rotary RCT technology.</p>
+</div>
+<a class="mt-2 text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="group flex flex-col gap-5 rounded-2xl border border-[#dbe0e6] dark:border-slate-800 bg-white dark:bg-slate-900 p-8 hover:border-primary transition-all hover:shadow-xl">
+<div class="size-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">align_horizontal_center</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[#111418] dark:text-white text-xl font-bold leading-tight">Orthodontics (Braces)</h3>
+<p class="text-[#617589] dark:text-slate-400 text-base font-normal leading-relaxed">Straighten your smile with advanced metal, ceramic braces, or clear aligners for all age groups.</p>
+</div>
+<a class="mt-2 text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="group flex flex-col gap-5 rounded-2xl border border-[#dbe0e6] dark:border-slate-800 bg-white dark:bg-slate-900 p-8 hover:border-primary transition-all hover:shadow-xl">
+<div class="size-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">add_moderator</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-[#111418] dark:text-white text-xl font-bold leading-tight">Dental Implants</h3>
+<p class="text-[#617589] dark:text-slate-400 text-base font-normal leading-relaxed">Permanent and natural-looking solutions for missing teeth using world-class implant systems.</p>
+</div>
+<a class="mt-2 text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="#">
+                        Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Profile Header / About Us Snippet -->
+<section class="px-6 py-20 @container">
+<div class="bg-primary/5 dark:bg-slate-900/50 rounded-3xl p-10 @[864px]:p-16 border border-primary/10">
+<div class="flex flex-col @[864px]:flex-row gap-12 items-center">
+<div class="flex gap-4 relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-2xl min-h-48 w-48 shadow-lg z-10" data-alt="Portrait of professional dentist Dr. Kashish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCyJbiu7t8zt8j792425EeHc1L_jxfWUGKu9cluDML1tL1F5GSW6AR-70I37tGz5E0m2Yz8ntkCsP4WBxWXscp_j-uEKXiQ4eCavUmGZjkblIJZ1nbi5fY3ZghRv0V_ORX8PgIj-sydZI2_QHm6PPen0S4PgejLTS2oo7xR_JD4pZSEV1w4tLF9I2DdL9YuSEeaZxObJaXVcrO9P3nbgpFnR0wusjt8cRsUk8EMft6s6rc1-vBzCwKgXerHKYYYN2wy2xyicVh_KrST");'></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-2xl min-h-48 w-48 shadow-lg mt-12 -ml-12" data-alt="Portrait of professional dentist Dr. Nitin" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA49P49D2ts5ZNYVTU58ZL0h-FEFRECJfysM_ChkhXH6XI6CZD15qHdn6TzheDnGH8oBddpmgan5oL31FN5SkWD6joP44NUIhaRbJhtRwdfattUWq_beM1H0QQQ4h631qq45IM6B1Naaxyqx7KafdMV0r29ya1uQC00sF43xePIUsL2ei8daidx4Z2KWJKdPn5RrFad7_X4yCWGCKALuziamKS2OYllemAAk6iOHQLcFhx3cveOEoXUnfBALdVWbpSWdV9GxeYFRoi2");'></div>
+</div>
+<div class="flex flex-col gap-6 max-w-2xl text-center @[864px]:text-left">
+<div>
+<h2 class="text-[#111418] dark:text-white text-3xl font-bold leading-tight tracking-tight mb-4">Meet Our Experts: Dr. Kashish &amp; Dr. Nitin</h2>
+<p class="text-[#617589] dark:text-slate-400 text-lg font-normal leading-relaxed">
+                                Dedicated to providing high-quality dental care with over a decade of combined clinical experience. Our lead dentists specialize in advanced oral surgery, cosmetic dentistry, and digital implantology.
+                            </p>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3 justify-center @[864px]:justify-start">
+<span class="material-symbols-outlined text-primary">verified</span>
+<p class="text-[#111418] dark:text-slate-200 text-base font-semibold">Lead Dentists at Balaji Dental Clinic</p>
+</div>
+<div class="flex items-center gap-3 justify-center @[864px]:justify-start">
+<span class="material-symbols-outlined text-primary">school</span>
+<p class="text-[#111418] dark:text-slate-200 text-base font-semibold">MDS - Periodontics &amp; Prosthodontics</p>
+</div>
+</div>
+<button class="w-fit self-center @[864px]:self-start bg-primary text-white px-8 py-3 rounded-lg font-bold">
+                            View Full Profiles
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Branches / Location Section -->
+<section class="px-6 py-12">
+<h2 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight mb-8">Visit our Branches</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-900 border border-[#dbe0e6] dark:border-slate-800 p-6 rounded-2xl">
+<div class="w-full h-32 bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Map location for Downtown branch" data-location="New Delhi" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAclBe43S-T5XNxmIC9KJkIKxEQrbL5cZ5YYS3I-7rPtwcPUv4JJF_VkJsE1fCgfBckn97BJzqmNSilmBazaR7256vufyQZAF3q6bYnPSfZb8Z7q3zWkINRU2p_sRKcdp0xRdIy-25k5BNcwau63U-wmEAq8u8dsz31IaW4sJMGvvEu0nnLZhA48PNVW1H64CB8S2tt4dSHanEUR_5AIJe6lmwRjWWeo15uBZC6Y-aZQWbV34uzgEj8jCs_Ieo-3CSKB-UH1Nw0nf-");'></div>
+</div>
+<h4 class="font-bold text-lg mb-1">Main Branch</h4>
+<p class="text-sm text-[#617589] dark:text-slate-400 mb-4">123 Health Ave, Sector 15, Rohini, Delhi</p>
+<button class="text-primary text-sm font-bold flex items-center gap-1">Get Directions <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-[#dbe0e6] dark:border-slate-800 p-6 rounded-2xl">
+<div class="w-full h-32 bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Map location for City branch" data-location="Gurugram" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANlCiuVhCf9XsepzjY46DQw9lXT0wpr_IzUIXLchwDT1g9M7YzvCth6FYFFPTqNb0aot9ua2FGOwEU2b5TpwrfqO_FloT92M2pApdWoEFTP19YqI77QCZxZ9KPZDE4lZLfWAHstKoho_hyIOuZg_BeVdMv91W25tdzvVxkopFCAaGCJgNDdUoLRiBPaIxFUDSiDN_i6Ub6v5Sk76C9HgEMvX420uLZGDuHVRSZXGcGmBvLjwaX6c9H72KWRLIPa6ZeD0VeqRb0SB7b");'></div>
+</div>
+<h4 class="font-bold text-lg mb-1">City Center Branch</h4>
+<p class="text-sm text-[#617589] dark:text-slate-400 mb-4">G-45, Galaxy Mall, MG Road, Gurugram</p>
+<button class="text-primary text-sm font-bold flex items-center gap-1">Get Directions <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-[#dbe0e6] dark:border-slate-800 p-6 rounded-2xl">
+<div class="w-full h-32 bg-slate-100 dark:bg-slate-800 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="Map location for West branch" data-location="Noida" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAamQGrQsGgjHKHmCrdkBjY9mTuXx1swnwPLN-Okmp6_XG7nLYd7HY0V4fQZ5tXJ1zbJq6ZDkkmoKr4sw8kRPXkZ8JoxXQAA4I3Y8f1PYZOn4XSbSLjJZjy1yNLCzIjveoAdj9s-vl6E--A6pnNEgGWyOP_NMkOZY-o9ziQm8vN4NkJw_WOOvHIVWIiSYw9z6cpAYu46wiTobjYNBVC8p1f6H0roj1tZxyc2br-Eku9Bbx3zx-cuUGxxG6vk0vOZXAa9pnry9hpIMBH");'></div>
+</div>
+<h4 class="font-bold text-lg mb-1">North Extension</h4>
+<p class="text-sm text-[#617589] dark:text-slate-400 mb-4">Plot 12, Block C, Noida Sector 62</p>
+<button class="text-primary text-sm font-bold flex items-center gap-1">Get Directions <span class="material-symbols-outlined text-sm">open_in_new</span></button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-950 border-t border-[#f0f2f4] dark:border-slate-900 mt-20">
+<div class="max-w-[1280px] mx-auto px-6 py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">dentistry</span>
+</div>
+<h2 class="text-xl font-bold">Balaji Dental</h2>
+</div>
+<p class="text-[#617589] text-sm leading-relaxed">
+                        Excellence in dental care for over 10 years. We combine medical expertise with a human touch to ensure your visits are comfortable and results are outstanding.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold mb-6">Quick Links</h4>
+<ul class="flex flex-col gap-3 text-sm text-[#617589]">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Our Services</a></li>
+<li><a class="hover:text-primary" href="#">Clinical Gallery</a></li>
+<li><a class="hover:text-primary" href="#">Patient Feedback</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Services</h4>
+<ul class="flex flex-col gap-3 text-sm text-[#617589]">
+<li><a class="hover:text-primary" href="#">Cosmetic Dentistry</a></li>
+<li><a class="hover:text-primary" href="#">Emergency Dental</a></li>
+<li><a class="hover:text-primary" href="#">Implant Surgery</a></li>
+<li><a class="hover:text-primary" href="#">Pediatric Dentistry</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Contact Us</h4>
+<ul class="flex flex-col gap-3 text-sm text-[#617589]">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">call</span> +91 98765 43210</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">mail</span> info@balajidental.com</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">schedule</span> Mon - Sat: 10AM - 8PM</li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-[#f0f2f4] dark:border-slate-900 text-center text-[#617589] text-xs">
+                © 2024 Balaji Dental Clinic. All rights reserved.
+            </div>
+</div>
+</footer>
+<!-- Floating WhatsApp Icon -->
+<a class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white size-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer" href="https://wa.me/your-number" target="_blank">
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</a>
+</body></html>

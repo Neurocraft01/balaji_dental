@@ -1,0 +1,227 @@
+.sectionHeader {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.titleUnderline {
+    width: 4rem;
+    height: 0.25rem;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    border-radius: 9999px;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .servicesGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #dbe0e6;
+    background-color: var(--white);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.serviceCard:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.serviceIconWrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(19, 127, 236, 0.1);
+    color: var(--primary-color);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.serviceCard:hover .serviceIconWrapper {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.serviceTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.serviceDesc {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.learnMore {
+    margin-top: auto;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: gap 0.2s;
+}
+
+.serviceCard:hover .learnMore {
+    gap: 0.5rem;
+}
+
+.expertsSection {
+    padding: 5rem 1.5rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.expertsCard {
+    background-color: rgba(19, 127, 236, 0.05);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(19, 127, 236, 0.1);
+}
+
+@media (min-width: 864px) {
+    .expertsCard {
+        padding: 4rem;
+    }
+}
+
+.expertsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 864px) {
+    .expertsContent {
+        flex-direction: row;
+    }
+}
+
+.imagesWrapper {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.expertImage {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd;
+    box-shadow: var(--shadow-md);
+}
+
+.expertImage:nth-child(2) {
+    margin-top: 3rem;
+    margin-left: -3rem;
+    z-index: 1;
+}
+
+.expertsText {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+@media (min-width: 864px) {
+    .expertsText {
+        text-align: left;
+        max-width: 42rem;
+    }
+}
+
+.expertBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+@media (min-width: 864px) {
+    .expertBadge {
+        justify-content: flex-start;
+    }
+}
+
+.btnViewProfiles {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+@media (min-width: 864px) {
+    .btnViewProfiles {
+        align-self: flex-start;
+    }
+}
+
+/* Branch Cards */
+.branchCard {
+    background-color: var(--white);
+    border: 1px solid #dbe0e6;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.mapPlaceholder {
+    width: 100%;
+    height: 8rem;
+    background-color: #f1f5f9;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mapImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,153 @@
+/* Modern Page Styling */
+.section {
+    padding: 6rem 1.5rem;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.bgSurface {
+    background-color: var(--surface);
+}
+
+.introGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .introGrid {
+        grid-template-columns: 1fr 0.8fr;
+    }
+}
+
+.introContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.subHeading {
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.paragraph {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Doctor Profile Card - Glassmorphism */
+.doctorCard {
+    position: relative;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.docImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+}
+
+.docName {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.docTitle {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.docBio {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.featureCard {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.featureCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-color);
+}
+
+.iconCircle {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(25, 167, 206, 0.1);
+    /* Secondary light */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.ctaSection {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 1.5rem;
+    border-radius: 2rem;
+    margin: 4rem 1.5rem;
+    /* Pattern overlay */
+    background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 20%);
+}
+
+.timingsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--surface);
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.timeCard {
+    text-align: center;
+}

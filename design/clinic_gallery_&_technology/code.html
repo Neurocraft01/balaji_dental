@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinic Gallery &amp; Technology - Balaji Dental Clinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .masonry-grid {
+            columns: 1;
+            column-gap: 1rem;
+        }
+        @media (min-width: 640px) {
+            .masonry-grid {
+                columns: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                columns: 3;
+            }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#f0f2f4] dark:border-gray-800">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary size-6 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">dentistry</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight">Balaji Dental Clinic</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-primary text-sm font-semibold" href="#">Gallery</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Technology</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Branches</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-primary/90 transition-all shadow-sm">
+                Book Appointment
+            </button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 lg:px-10 py-12">
+<!-- Page Heading Section -->
+<div class="max-w-[800px] mb-12">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-3 block">Excellence in Care</span>
+<h2 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4">
+                Clinic Gallery &amp; <span class="text-primary">Advanced Technology</span>
+</h2>
+<p class="text-[#617589] dark:text-gray-400 text-lg leading-relaxed">
+                Experience the pinnacle of modern dentistry through our state-of-the-art facilities. We combine world-class hygiene standards with the latest diagnostic tools for your comfort.
+            </p>
+</div>
+<!-- Filter Chips Section -->
+<div class="flex items-center gap-3 mb-10 overflow-x-auto pb-4 no-scrollbar">
+<button class="px-6 py-2.5 bg-primary text-white text-sm font-bold rounded-full shadow-md transition-all">
+                All Photos
+            </button>
+<button class="px-6 py-2.5 bg-white dark:bg-gray-800 text-[#111418] dark:text-gray-200 text-sm font-medium rounded-full border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-all">
+                Clinic Interior
+            </button>
+<button class="px-6 py-2.5 bg-white dark:bg-gray-800 text-[#111418] dark:text-gray-200 text-sm font-medium rounded-full border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-all">
+                Technology
+            </button>
+<button class="px-6 py-2.5 bg-white dark:bg-gray-800 text-[#111418] dark:text-gray-200 text-sm font-medium rounded-full border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-all">
+                Patient Comfort
+            </button>
+<button class="px-6 py-2.5 bg-white dark:bg-gray-800 text-[#111418] dark:text-gray-200 text-sm font-medium rounded-full border border-gray-100 dark:border-gray-700 hover:border-primary/50 transition-all">
+                Sterilization Zone
+            </button>
+</div>
+<!-- Section Header -->
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-bold tracking-tight">Our Facilities</h3>
+<div class="flex gap-2">
+<button class="p-2 rounded-full bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 text-gray-500 hover:text-primary">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="p-2 rounded-full bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 text-gray-500 hover:text-primary">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Custom Masonry Grid -->
+<div class="masonry-grid">
+<!-- Item 1 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-gray-200 cursor-pointer">
+<div class="aspect-[4/5] w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Modern dental reception area with clean design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpn45tVEJhNMVwEAf0GG8RTIyvNOyBJVxe4la2dSeGRR9UbI9A2U4P1FKicTeUMYo_60BAmV74L_FhzcNyGE6tT5TlvxAgwKaD_xY1RkqIBABrGKJlVCea_wOEjIuAz3qctwKFRDGmX2gFx-2BKq_SGYJOwcRYOMaWpg1Qnvjy8AqAyk4kHIRxaaxvc9EoC1NjuuPzbvDIIYIGtzm4w7L42j-wLnhT0cfwtJSbxFOnfeAp7T8we_3FvrEgqY-EV-i7lpYVcNa9obTE');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<p class="text-white text-lg font-bold">Modern Reception Area</p>
+<p class="text-white/80 text-sm">Welcome lounge at our main branch</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-gray-200 cursor-pointer">
+<div class="aspect-[1/1] w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="High-tech 3D CBCT diagnostic scanner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWtLEQVKl0jEHInL7PCLBFyqbAJPz_1HJ5YElEfWnrb3HwZ3OMH3hnFs7QieOrJ2rn95vG0lwP8Sr4bQOPymLm8NBpLcnmvyIWgct-clpRtQwWMLuqBGKrJmo9UWrjXJE5KKJGTd3OjjFJdPkmonjtT_fDcBJerhRjaG88YD_mRv1r7FE7sWDtoqkTbDSASyXW550IE4SwFkRZY2FeIiwE2axrlx9iB5flbeUIPF7h3W9THAFWDyPBe65b13zMwQAaSjQBF1h9pVkS');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<p class="text-white text-lg font-bold">3D CBCT Scanner</p>
+<p class="text-white/80 text-sm">Precision diagnostic imaging technology</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-gray-200 cursor-pointer">
+<div class="aspect-[3/4] w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Sterilization zone with modern autoclave equipment" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYAwrBG7ZIXkwJgfImVMoi94aoRyCHEWASb_D24P33dumDC65DpjRicCzxIqbfVPgAzJk_6Z4-069HXyOjVP4rZtbw2Py11hc1So7yzkAkU4eE8gr9iYRgtYq9nOK-AJTsgaTP8KGKWZNgurfdI1PyMgnf1m_reYPJkZlWoN6SkfV-ZXaTKa1ZHBCJw351UkjjP6iZfLxpImyLMyh7QHhfz76-XaH7QTc0lgLTVKiX2WGgiIm-LKn1Zv355mlGGbHBxRyZXRxB4ucq');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<p class="text-white text-lg font-bold">Sterilization Zone</p>
+<p class="text-white/80 text-sm">Industry-leading hygiene protocols</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-gray-200 cursor-pointer">
+<div class="aspect-[16/9] w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Ergonomic dental chair in a bright room" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQA_OsBLcmohJG3H1nSW6OLwHiN2CoGC9mnZdEkFE7oAfnjUwqmROnub6rnooMoUbNdGCLg0Qr9tcLkaEKFg0s3ttPA03zK2kcvpoE60EB3wUQrjaxIPbfHGsnTDVmLXe8LCYARR1JVb0o1rGj7QJbOk3jEjicmV2--IDWOxrPe6atYo4rdPLBbqysPFa5kBitb8Mj6UohYMNZThDZAffcXZmJtq_k_0KHTQdVwz7YYW9MSgLjqePOUhGBbZ_jQHjO4PnGzrLy1hsL');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<p class="text-white text-lg font-bold">Premium Patient Suites</p>
+<p class="text-white/80 text-sm">Designed for maximum comfort</p>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-gray-200 cursor-pointer">
+<div class="aspect-[4/5] w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of advanced intraoral digital camera" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdR0nVv-ofZ66xvUojSnbfoji9BeoDtvGJe_iqeGWN_Jug5O77NkoPGmCWkQ_TrFXigleUFgcN8lz5KQbnxrKWtFwD-GKvKo7Wj2BZ9eg6hYeozOWgLyQfop6TaeN6xt2lpwl-h7WgkobaMtE7doVyq-J2_IcaJkzKHxNxj4RvRF_u2IBWpW0kqTr29TeKkwpJ9QQuoV6zLxU8EmV4LXE4kLvYqoQgy8kEHSMh7g-LpPmrD9haayyKjsUl2D8SfhC9g2C98_IOhkdi');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<p class="text-white text-lg font-bold">Digital Intraoral Camera</p>
+<p class="text-white/80 text-sm">Real-time high definition imaging</p>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="masonry-item group relative overflow-hidden rounded-xl bg-gray-200 cursor-pointer">
+<div class="aspect-[1/1] w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Clean and minimal consultation room" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmKVjURXxCl1Gzk00M3-DaoY-ROs1YCsZNY-Wf-5zLGb9pTydeQEK64pWGVgRcTDK2NybprPjSEq0Xd-of4JnQA-AI-xOF0AIMn1hF8XJnx-zIee1EPeu2VMZ-N_JLSi7tmnNA__3C2DO_xtvNUlg6d3Fc2hT_p3TgOKy6g9uLLbl6y2AeQJMEBkLefIIN1GutdXQ2C2KmuUF2KR1wzTrZ1_oY2feGSfSobVJlpOadkfeVxvj7QOxBQg8A5LtXmHkwXl8SKEygx236');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<p class="text-white text-lg font-bold">Consultation Room</p>
+<p class="text-white/80 text-sm">Private space for treatment planning</p>
+</div>
+</div>
+</div>
+<!-- Secondary Section: Technical Standards -->
+<div class="mt-24 mb-12 py-16 border-t border-[#f0f2f4] dark:border-gray-800">
+<h3 class="text-3xl font-bold mb-10 text-center">Our Technological Standards</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-sm border border-gray-50 dark:border-gray-700">
+<div class="size-14 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">biotech</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Microscopic Dentistry</h4>
+<p class="text-sm text-[#617589] dark:text-gray-400">High-precision procedures using Zeiss dental microscopes for superior accuracy.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-sm border border-gray-50 dark:border-gray-700">
+<div class="size-14 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+</div>
+<h4 class="font-bold text-lg mb-2">CAD/CAM Systems</h4>
+<p class="text-sm text-[#617589] dark:text-gray-400">Same-day dental crowns and restorations with our advanced digital milling unit.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-sm border border-gray-50 dark:border-gray-700">
+<div class="size-14 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">sanitizer</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Class-B Sterilization</h4>
+<p class="text-sm text-[#617589] dark:text-gray-400">Hospital-grade sterilization protocols with automated vacuum autoclaves.</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 rounded-2xl bg-white dark:bg-gray-800 shadow-sm border border-gray-50 dark:border-gray-700">
+<div class="size-14 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">radiology</span>
+</div>
+<h4 class="font-bold text-lg mb-2">Digital Radiography</h4>
+<p class="text-sm text-[#617589] dark:text-gray-400">90% less radiation exposure with instant high-resolution digital X-rays.</p>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="bg-primary rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<svg height="100%" preserveaspectratio="none" viewbox="0 0 100 100" width="100%">
+<path d="M0 100 C 20 0 50 0 100 100 Z" fill="currentColor"></path>
+</svg>
+</div>
+<h3 class="text-3xl md:text-4xl font-extrabold mb-6 relative z-10">Ready to experience modern dental care?</h3>
+<p class="text-white/90 text-lg mb-10 max-w-2xl mx-auto relative z-10">
+                Book a consultation today and see our technology in action for your personalized treatment plan.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+<button class="bg-white text-primary font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-all shadow-lg">
+                    Schedule Your Visit
+                </button>
+<button class="bg-primary/20 backdrop-blur-md border border-white/30 text-white font-bold px-8 py-4 rounded-xl hover:bg-primary/30 transition-all">
+                    View Branches
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 py-12 px-10">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">dentistry</span>
+<h2 class="text-xl font-bold tracking-tight">Balaji Dental Clinic</h2>
+</div>
+<p class="text-[#617589] dark:text-gray-400 max-w-md leading-relaxed">
+                    Dedicated to providing world-class dental care using the latest technology and a patient-first approach. With multiple locations, we're always close to you.
+                </p>
+</div>
+<div>
+<h4 class="font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 text-sm text-[#617589] dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Find a Clinic</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Specialists</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Insurance Partners</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Patient FAQs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6">Legal</h4>
+<ul class="space-y-4 text-sm text-[#617589] dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto mt-12 pt-8 border-t border-[#f0f2f4] dark:border-gray-800 flex flex-col md:row items-center justify-between gap-6">
+<p class="text-xs text-[#617589] dark:text-gray-500">© 2024 Balaji Dental Clinic. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
