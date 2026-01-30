@@ -1,21 +1,22 @@
 /* ==========================================
-   NAVBAR - CLEAN, MINIMAL
+   PREMIUM NAVBAR - TOP CLINIC STYLE
    ========================================== */
 
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 252, 247, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 252, 247, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.4s var(--ease-out-expo);
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .navContainer {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 16px 24px;
+    padding: 18px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,24 +26,35 @@
 .logoWrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     text-decoration: none;
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.logoWrapper:hover {
+    transform: translateX(4px);
 }
 
 .logoIcon {
-    width: 40px;
-    height: 40px;
-    background: var(--primary-color);
-    border-radius: 10px;
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, var(--primary-color), var(--navy-light));
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    transition: all 0.4s var(--ease-out-expo);
+}
+
+.logoWrapper:hover .logoIcon {
+    background: linear-gradient(135deg, var(--secondary-color), var(--gold-accent));
+    transform: rotate(-5deg);
 }
 
 .logoText {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--primary-color);
     font-family: var(--font-heading);
@@ -52,7 +64,7 @@
     font-size: 0.7rem;
     color: var(--text-light);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
 }
 
 /* Navigation Links */
@@ -61,7 +73,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 32px;
+    gap: 36px;
 }
 
 @media (min-width: 1024px) {
@@ -76,11 +88,28 @@
     font-weight: 500;
     color: var(--text-main);
     text-decoration: none;
-    transition: color 0.3s ease;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s var(--ease-out-expo);
 }
 
 .navLink:hover {
     color: var(--secondary-color);
+}
+
+.navLink:hover::after {
+    width: 100%;
 }
 
 /* Nav Actions */
@@ -93,27 +122,45 @@
 .btnCall {
     display: flex;
     align-items: center;
-    gap: 8px;
-    background: var(--primary-color);
+    gap: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--navy-light));
     color: white;
-    padding: 12px 24px;
+    padding: 14px 28px;
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 600;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s var(--ease-out-expo);
     text-decoration: none;
+    box-shadow: 0 4px 15px rgba(10, 25, 41, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btnCall::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btnCall:hover::before {
+    left: 100%;
 }
 
 .btnCall:hover {
-    background: var(--navy-light);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(10, 25, 41, 0.3);
 }
 
 .btnContact {
     display: none;
-    padding: 12px 20px;
+    padding: 14px 20px;
     background: transparent;
     color: var(--text-main);
     font-size: 0.9rem;
@@ -121,7 +168,7 @@
     border: none;
     cursor: pointer;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .btnContact:hover {
@@ -141,21 +188,31 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    width: 40px;
-    height: 40px;
-    background: transparent;
+    width: 44px;
+    height: 44px;
+    background: var(--surface);
     border: none;
+    border-radius: 10px;
     cursor: pointer;
     margin-left: 12px;
+    transition: all 0.3s;
 }
 
 .mobileMenuBtn span {
     display: block;
-    width: 22px;
+    width: 20px;
     height: 2px;
     background: var(--primary-color);
     border-radius: 2px;
     transition: all 0.3s;
+}
+
+.mobileMenuBtn:hover {
+    background: var(--secondary-color);
+}
+
+.mobileMenuBtn:hover span {
+    background: white;
 }
 
 @media (min-width: 1024px) {
@@ -173,8 +230,9 @@
     width: 100%;
     background: var(--white);
     flex-direction: column;
-    padding: 16px 24px;
-    box-shadow: var(--shadow-medium);
+    padding: 20px 24px;
+    box-shadow: var(--shadow-md);
+    animation: slideUp 0.4s var(--ease-out-expo);
 }
 
 .mobileMenu.open {
@@ -185,4 +243,8 @@
     padding: 16px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
     display: block;
+}
+
+.mobileMenu .navLink::after {
+    display: none;
 }

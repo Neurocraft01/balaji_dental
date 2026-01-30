@@ -1,25 +1,40 @@
 /* ==========================================
-   FOOTER - CLEAN, OPEN
+   PREMIUM FOOTER - TOP CLINIC STYLE
    ========================================== */
 
 .footer {
-    background: var(--primary-color);
+    position: relative;
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: var(--white);
     margin-top: 0;
-    padding: 60px 0 32px;
+    padding: 80px 0 40px;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -20%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(201, 151, 108, 0.08) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 .footerContainer {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 24px;
+    position: relative;
+    z-index: 1;
 }
 
 .footerGrid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
-    margin-bottom: 48px;
+    gap: 48px;
+    margin-bottom: 56px;
 }
 
 @media (min-width: 768px) {
@@ -37,34 +52,34 @@
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
+    gap: 14px;
+    margin-bottom: 24px;
 }
 
 .brandIcon {
-    width: 44px;
-    height: 44px;
-    background: var(--secondary-color);
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--gold-accent));
     color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
 }
 
 .brandText {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 700;
     color: var(--white);
     font-family: var(--font-heading);
 }
 
 .desc {
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.8;
     font-size: 0.95rem;
-    max-width: 280px;
+    max-width: 300px;
 }
 
 /* Column Titles */
@@ -72,7 +87,19 @@
     font-size: 1rem;
     font-weight: 600;
     color: var(--secondary-color);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.colTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 32px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--secondary-color), transparent);
 }
 
 /* Links */
@@ -80,33 +107,34 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
 }
 
 .linkItem {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.65);
     font-size: 0.95rem;
-    transition: color 0.3s;
+    transition: all 0.3s var(--ease-out-expo);
     text-decoration: none;
 }
 
 .linkItem:hover {
     color: var(--white);
+    transform: translateX(6px);
 }
 
 /* Contact */
 .contactItem {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    color: rgba(255, 255, 255, 0.7);
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.65);
     font-size: 0.95rem;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }
 
 .contactItem span {
     color: var(--secondary-color);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     flex-shrink: 0;
 }
 
@@ -114,30 +142,31 @@
 .socialLinks {
     display: flex;
     gap: 12px;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .socialLink {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: 1rem;
-    transition: all 0.3s;
+    font-size: 1.1rem;
+    transition: all 0.3s var(--ease-out-expo);
 }
 
 .socialLink:hover {
     background: var(--secondary-color);
+    transform: translateY(-4px);
 }
 
 /* Footer Bottom */
 .footerBottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 28px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -146,7 +175,7 @@
 }
 
 .copyright {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.45);
     font-size: 0.85rem;
 }
 
@@ -161,7 +190,7 @@
 }
 
 .footerLinks a {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.45);
     font-size: 0.85rem;
     text-decoration: none;
     transition: color 0.3s;

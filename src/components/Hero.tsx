@@ -7,16 +7,21 @@ import styles from './Hero.module.css';
 const Hero = () => {
     return (
         <section className={styles.hero}>
+            {/* Decorative Elements */}
+            <div className={`${styles.heroDecor} ${styles.heroDecor1}`}></div>
+            <div className={`${styles.heroDecor} ${styles.heroDecor2}`}></div>
+            <div className={`${styles.heroDecor} ${styles.heroDecor3}`}></div>
+
             <div className={styles.heroContainer}>
                 {/* Left Content */}
                 <div className={styles.heroContent}>
                     <div className={styles.badge}>
-                        <span className="material-symbols-outlined" style={{ fontSize: '1rem' }}>verified</span>
+                        <span className="material-symbols-outlined">verified</span>
                         #1 Dental Clinic in Pimpri-Chinchwad
                     </div>
 
                     <h1 className={styles.title}>
-                        Your Smile,<br />
+                        Your Smile,
                         <span className={styles.highlight}>Redefined.</span>
                     </h1>
 
@@ -54,13 +59,31 @@ const Hero = () => {
 
                 {/* Right Image */}
                 <div className={styles.heroImage}>
+                    <div className={styles.imageFrame}></div>
                     <div className={styles.heroImageInner}>
                         <img
                             src="/hero-design.jpg"
                             alt="Modern Dental Clinic"
                         />
                     </div>
+
+                    {/* Floating Badge */}
+                    <div className={styles.floatingBadge}>
+                        <div className={styles.icon}>
+                            <span className="material-symbols-outlined">workspace_premium</span>
+                        </div>
+                        <div className={styles.text}>
+                            <strong>IDA Certified</strong>
+                            <span>Indian Dental Association</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className={styles.scrollIndicator}>
+                <span>Scroll</span>
+                <div className={styles.scrollLine}></div>
             </div>
         </section>
     );
