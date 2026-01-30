@@ -1,59 +1,65 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import styles from './Hero.module.css';
 
 const Hero = () => {
     return (
-        <section className={styles.heroSection}>
-            {/* Background with Overlays */}
-            <div className={styles.backgroundWrapper}>
-                <div className={styles.overlayGradient}></div>
-                {/* Using the provided design image which was high quality */}
-                <div
-                    className={styles.heroImage}
-                    style={{
-                        background: 'url("/hero-design.jpg") center/cover no-repeat'
-                    }}
-                    role="img"
-                    aria-label="Luxury Dental Clinic Interior"
-                ></div>
-            </div>
+        <section className={styles.hero}>
+            <div className={styles.heroContainer}>
+                {/* Left Content */}
+                <div className={styles.heroContent}>
+                    <div className={styles.badge}>
+                        <span className="material-symbols-outlined" style={{ fontSize: '1rem' }}>verified</span>
+                        #1 Dental Clinic in Pimpri-Chinchwad
+                    </div>
 
-            {/* Hero Content */}
-            <div className={styles.contentContainer}>
-                <div className={styles.badge}>
-                    <span className="material-symbols-outlined" style={{ fontSize: '1.2rem' }}>verified</span>
-                    <span>#1 Dental Clinic in Pimpri-Chinchwad</span>
+                    <h1 className={styles.title}>
+                        Your Smile,<br />
+                        <span className={styles.highlight}>Redefined.</span>
+                    </h1>
+
+                    <p className={styles.description}>
+                        Experience modern dentistry where cutting-edge technology meets
+                        compassionate care. Dr. Nitin Sadhwani brings 18+ years of expertise
+                        to give you the smile you deserve.
+                    </p>
+
+                    <div className={styles.buttonGroup}>
+                        <Link href="/appointment" className={styles.btnPrimary}>
+                            <span className="material-symbols-outlined">calendar_month</span>
+                            Book Appointment
+                        </Link>
+                        <Link href="/services" className={styles.btnSecondary}>
+                            Explore Services
+                        </Link>
+                    </div>
+
+                    <div className={styles.stats}>
+                        <div className={styles.stat}>
+                            <span className={styles.statValue}>18+</span>
+                            <span className={styles.statLabel}>Years Experience</span>
+                        </div>
+                        <div className={styles.stat}>
+                            <span className={styles.statValue}>4.8★</span>
+                            <span className={styles.statLabel}>Patient Rating</span>
+                        </div>
+                        <div className={styles.stat}>
+                            <span className={styles.statValue}>5000+</span>
+                            <span className={styles.statLabel}>Happy Patients</span>
+                        </div>
+                    </div>
                 </div>
 
-                <h1 className={styles.title}>
-                    World-Class Dentistry <br />
-                    <span className={styles.highlight}>With a Gentle Touch.</span>
-                </h1>
-
-                <p className={styles.description}>
-                    Experience 2026's standard of dental care with Dr. Nitin Sadhwani (18+ Years Exp).
-                    Painless treatments, advanced implantology, and a smile that lasts a lifetime.
-                </p>
-
-                <div className={styles.trustIndicators}>
-                    <div className={styles.ratingBox}>
-                        <div className={styles.ratingVal}>4.8 <span className={styles.stars}>★★★★★</span></div>
-                        <div className={styles.ratingLabel}>112+ Jd Ratings</div>
+                {/* Right Image */}
+                <div className={styles.heroImage}>
+                    <div className={styles.heroImageInner}>
+                        <img
+                            src="/hero-design.jpg"
+                            alt="Modern Dental Clinic"
+                        />
                     </div>
-                    <div className={styles.ratingBox} style={{ borderLeft: '1px solid rgba(255,255,255,0.2)', paddingLeft: '2rem' }}>
-                        <div className={styles.ratingVal}>18+</div>
-                        <div className={styles.ratingLabel}>Years of Excellence</div>
-                    </div>
-                </div>
-
-                <div className={styles.buttonGroup}>
-                    <Link href="/appointment" className={styles.btnPrimary}>
-                        Book Appointment
-                    </Link>
-                    <Link href="/services" className={styles.btnSecondary}>
-                        View Treatments
-                    </Link>
                 </div>
             </div>
         </section>

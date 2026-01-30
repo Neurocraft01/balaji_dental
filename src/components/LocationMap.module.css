@@ -1,0 +1,140 @@
+/* ==========================================
+   LOCATION MAP - CLEAN, OPEN
+   ========================================== */
+
+.locationSection {
+    padding: 80px 0;
+    background: var(--surface);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.badge {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Locations Grid */
+.locationsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .locationsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.locationCard {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.locationCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.mapContainer {
+    width: 100%;
+    height: 200px;
+    background: var(--surface);
+}
+
+.mapContainer iframe {
+    border-radius: 0;
+}
+
+.locationInfo {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.locationName {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0;
+}
+
+.infoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.infoItem span {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.infoItem p,
+.infoItem a {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.infoItem a:hover {
+    color: var(--secondary-color);
+}
+
+.directionsBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 24px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.directionsBtn:hover {
+    background: var(--navy-light);
+    transform: translateY(-2px);
+}

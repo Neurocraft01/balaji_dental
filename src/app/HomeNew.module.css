@@ -1,153 +1,361 @@
-/* Modern Page Styling */
+/* ==========================================
+   HOME PAGE - CLEAN, OPEN DESIGN
+   Minimal boxing, proper spacing, flowing
+   ========================================== */
+
+/* ========================================
+   SECTIONS - OPEN, BREATHING ROOM
+   ======================================== */
+
 .section {
-    padding: 6rem 1.5rem;
+    padding: 80px 24px;
     max-width: var(--container-width);
     margin: 0 auto;
 }
 
-.bgSurface {
-    background-color: var(--surface);
+.sectionAlt {
+    background: var(--surface);
+    padding: 80px 0;
 }
+
+.sectionInner {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ========================================
+   SECTION HEADERS - MINIMAL
+   ======================================== */
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sectionLabel {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.sectionSubtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   INTRO SECTION - TWO COLUMN OPEN
+   ======================================== */
 
 .introGrid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 60px;
+    align-items: start;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
     .introGrid {
-        grid-template-columns: 1fr 0.8fr;
+        grid-template-columns: 1.2fr 0.8fr;
     }
 }
 
-.introContent {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.subHeading {
-    color: var(--secondary-color);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.875rem;
-}
-
-.heading {
-    font-size: 2.5rem;
+.introContent h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     color: var(--primary-color);
+    margin-bottom: 24px;
     line-height: 1.2;
 }
 
-.paragraph {
-    font-size: 1.125rem;
+.introContent p {
     color: var(--text-light);
+    font-size: 1.05rem;
     line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-/* Doctor Profile Card - Glassmorphism */
-.doctorCard {
-    position: relative;
-    padding: 2.5rem;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    /* Glass Effect */
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: var(--shadow-lg);
+.introContent strong {
+    color: var(--text-main);
+}
+
+/* Timings - Simple inline */
+.timingsRow {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.docImage {
-    width: 100px;
-    height: 100px;
+.timeItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.timeItem span {
+    color: var(--secondary-color);
+}
+
+/* Doctor Info - Simple, not boxed */
+.doctorInfo {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 32px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.doctorImage {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--secondary-color);
+    flex-shrink: 0;
 }
 
-.docName {
-    font-size: 1.5rem;
+.doctorDetails h3 {
+    font-size: 1.25rem;
     color: var(--primary-color);
-    margin: 0;
+    margin-bottom: 4px;
 }
 
-.docTitle {
+.doctorDetails .title {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.doctorDetails p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.doctorDetails ul {
+    margin-top: 16px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.doctorDetails li {
+    padding: 6px 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.doctorDetails li::before {
+    content: '✓';
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* ========================================
+   SERVICES - OPEN CARDS
+   ======================================== */
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.serviceCard {
+    padding: 32px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--secondary-color);
+}
+
+.serviceIcon {
+    width: 56px;
+    height: 56px;
+    background: var(--surface);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.serviceCard:hover .serviceIcon {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.serviceCard h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.serviceCard p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* ========================================
+   REVIEWS - SIMPLE QUOTES
+   ======================================== */
+
+.reviewsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.reviewCard {
+    padding: 32px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border-left: 3px solid var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.reviewCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.reviewCard p {
+    font-style: italic;
+    color: var(--text-main);
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.reviewAuthor {
     color: var(--secondary-color);
     font-weight: 600;
     font-size: 0.9rem;
 }
 
-.docBio {
-    font-size: 0.95rem;
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
-.featuresGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.featureCard {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
-}
-
-.featureCard:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--secondary-color);
-}
-
-.iconCircle {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(25, 167, 206, 0.1);
-    /* Secondary light */
-    border-radius: 50%;
-    display: flex;
+.ratingBox {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    gap: 16px;
+    padding: 16px 28px;
+    background: var(--white);
+    border-radius: 999px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-soft);
 }
+
+.ratingNumber {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.ratingStars {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.ratingLabel {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   CTA - SIMPLE, OPEN
+   ======================================== */
 
 .ctaSection {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     color: var(--white);
+    padding: 80px 24px;
     text-align: center;
-    padding: 5rem 1.5rem;
-    border-radius: 2rem;
-    margin: 4rem 1.5rem;
-    /* Pattern overlay */
-    background-image: radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 20%);
+    margin: 80px 0 0;
 }
 
-.timingsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-    background: var(--surface);
-    border-radius: 1rem;
-    margin-top: 2rem;
+.ctaSection h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 16px;
 }
 
-.timeCard {
-    text-align: center;
+.ctaSection p {
+    opacity: 0.85;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.ctaButtons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ctaBtnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background: var(--white);
+    color: var(--primary-color);
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ctaBtnPrimary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+}
+
+.ctaBtnSecondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ctaBtnSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--white);
 }

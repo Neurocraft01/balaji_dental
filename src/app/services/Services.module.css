@@ -1,121 +1,131 @@
-/* Services Page Styles - Premium Medical Look */
+/* ==========================================
+   SERVICES PAGE - CLEAN, OPEN
+   ========================================== */
 
 .headerSection {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 100px 24px 60px;
     text-align: center;
-    padding: 4rem 1.5rem;
-    background-color: #F8FAFC;
-    border-bottom: 1px solid #e2e8f0;
+}
+
+.headerSection h1 {
+    color: var(--white);
+    margin-bottom: 20px;
 }
 
 .intro {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
     max-width: 700px;
-    margin: 1.5rem auto 0;
-    color: var(--text-light);
-    font-size: 1.125rem;
+    margin: 0 auto;
     line-height: 1.8;
 }
 
+/* Services Container */
 .servicesContainer {
     max-width: var(--container-width);
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
+    margin: 0 auto;
+    padding: 60px 24px;
 }
 
+/* Service Block - Alternating Layout */
 .serviceBlock {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 40px;
+    padding: 48px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     align-items: center;
 }
 
-@media (min-width: 864px) {
+@media (min-width: 768px) {
     .serviceBlock {
         grid-template-columns: 1fr 1fr;
-        gap: 5rem;
+        gap: 60px;
     }
 
-    .serviceBlock:nth-child(even) .content {
+    .serviceBlock:nth-child(even) .imageWrapper {
         order: 2;
     }
 }
 
+.serviceBlock:last-child {
+    border-bottom: none;
+}
+
+/* Image */
 .imageWrapper {
     width: 100%;
-    aspect-ratio: 4/3;
-    background-color: #eee;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    position: relative;
 }
 
 .imagePlaceholder {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
+    height: 280px;
+    border-radius: var(--radius-lg);
+    background-size: cover;
+    background-position: center;
 }
 
-.serviceBlock:hover .imagePlaceholder {
-    transform: scale(1.05);
-}
-
+/* Content */
 .content {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 16px;
 }
 
 .iconBox {
-    width: 64px;
-    height: 64px;
-    border-radius: 1rem;
-    background-color: rgba(19, 127, 236, 0.1);
-    color: var(--primary-color);
+    width: 56px;
+    height: 56px;
+    background: var(--surface);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    color: var(--secondary-color);
 }
 
 .serviceTitle {
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: var(--primary-color);
-    margin: 0;
+    line-height: 1.2;
 }
 
 .serviceDesc {
     color: var(--text-light);
-    line-height: 1.7;
     font-size: 1.05rem;
+    line-height: 1.8;
 }
 
+/* Features */
 .featureList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
 }
 
 .featureItem {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 6px;
     font-size: 0.9rem;
     color: var(--text-main);
-    font-weight: 500;
+    background: var(--surface);
+    padding: 8px 14px;
+    border-radius: 999px;
 }
 
+/* CTA Box */
 .ctaBox {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 60px 40px;
+    border-radius: var(--radius-lg);
     text-align: center;
-    padding: 5rem 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 1.5rem;
-    max-width: var(--container-width);
-    margin: 0 auto 4rem;
-    background-image: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 40%);
+    margin: 60px 0;
+}
+
+.ctaBox h2 {
+    color: var(--white);
 }

@@ -62,18 +62,19 @@
 .serviceIconWrapper {
     width: 3.5rem;
     height: 3.5rem;
-    background-color: rgba(19, 127, 236, 0.1);
-    color: var(--primary-color);
-    border-radius: 0.75rem;
+    background: var(--gradient-secondary);
+    color: var(--white);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-green);
 }
 
 .serviceCard:hover .serviceIconWrapper {
-    background-color: var(--primary-color);
-    color: white;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
 }
 
 .serviceTitle {
@@ -109,10 +110,10 @@
 }
 
 .expertsCard {
-    background-color: rgba(19, 127, 236, 0.05);
+    background-color: var(--accent-color);
     border-radius: 1.5rem;
     padding: 2.5rem;
-    border: 1px solid rgba(19, 127, 236, 0.1);
+    border: 2px solid rgba(201, 151, 108, 0.15);
 }
 
 @media (min-width: 864px) {

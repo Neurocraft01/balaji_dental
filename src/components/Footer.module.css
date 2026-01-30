@@ -1,27 +1,30 @@
+/* ==========================================
+   FOOTER - CLEAN, OPEN
+   ========================================== */
+
 .footer {
-    background-color: var(--white);
-    border-top: 1px solid #f0f2f4;
-    margin-top: 5rem;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    background: var(--primary-color);
+    color: var(--white);
+    margin-top: 0;
+    padding: 60px 0 32px;
 }
 
 .footerContainer {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 24px;
 }
 
 .footerGrid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
+    gap: 40px;
+    margin-bottom: 48px;
 }
 
 @media (min-width: 768px) {
     .footerGrid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 2fr 1fr 1fr 1fr;
     }
 }
 
@@ -30,74 +33,140 @@
     flex-direction: column;
 }
 
+/* Brand */
 .brand {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 .brandIcon {
-    width: 2rem;
-    height: 2rem;
-    background-color: var(--primary-color);
+    width: 44px;
+    height: 44px;
+    background: var(--secondary-color);
     color: white;
-    border-radius: 0.5rem;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.25rem;
 }
 
 .brandText {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--text-main);
+    color: var(--white);
+    font-family: var(--font-heading);
 }
 
 .desc {
-    color: var(--text-light);
-    line-height: 1.6;
-    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    max-width: 280px;
 }
 
+/* Column Titles */
 .colTitle {
     font-size: 1rem;
-    font-weight: 700;
-    color: var(--text-main);
-    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
 }
 
+/* Links */
 .links {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 12px;
 }
 
 .linkItem {
-    color: var(--text-light);
-    font-size: 0.875rem;
-    transition: color 0.2s;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    transition: color 0.3s;
     text-decoration: none;
 }
 
 .linkItem:hover {
-    color: var(--primary-color);
+    color: var(--white);
 }
 
+/* Contact */
 .contactItem {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-light);
-    font-size: 0.875rem;
-    margin-bottom: 0.75rem;
+    align-items: flex-start;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    margin-bottom: 14px;
 }
 
+.contactItem span {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Social */
+.socialLinks {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.socialLink {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.socialLink:hover {
+    background: var(--secondary-color);
+}
+
+/* Footer Bottom */
 .footerBottom {
-    border-top: 1px solid #f0f2f4;
-    padding-top: 2rem;
-    text-align: center;
-    color: var(--text-light);
-    font-size: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+}
+
+.copyright a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 24px;
+}
+
+.footerLinks a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footerLinks a:hover {
+    color: var(--secondary-color);
 }
