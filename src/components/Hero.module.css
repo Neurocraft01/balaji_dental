@@ -1,5 +1,5 @@
 /* ==========================================
-   PREMIUM HERO - TOP CLINIC STYLE
+   PREMIUM HERO - MODERN CLINIC STYLE
    Animated, Professional, Modern
    ========================================== */
 
@@ -9,13 +9,13 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--navy-light) 50%, var(--primary-color) 100%);
-    background-size: 200% 200%;
-    animation: gradientShift 8s ease infinite;
+    background: linear-gradient(135deg, var(--primary-deeper, #002C5F) 0%, var(--primary-color) 40%, var(--navy-light) 70%, var(--primary-color) 100%);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
     overflow: hidden;
 }
 
-/* Animated Background Elements */
+/* Animated Background Mesh */
 .hero::before {
     content: '';
     position: absolute;
@@ -35,7 +35,7 @@
     left: -10%;
     width: 60%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    background: radial-gradient(circle, rgba(26, 107, 196, 0.08) 0%, transparent 50%);
     animation: float 10s ease-in-out infinite reverse;
     pointer-events: none;
 }
@@ -44,7 +44,7 @@
 .heroDecor {
     position: absolute;
     border-radius: 50%;
-    border: 1px solid rgba(201, 151, 108, 0.15);
+    border: 1px solid rgba(201, 151, 108, 0.12);
     pointer-events: none;
 }
 
@@ -54,6 +54,7 @@
     top: 10%;
     right: 5%;
     animation: pulse 4s ease-in-out infinite;
+    background: radial-gradient(circle, rgba(0, 79, 166, 0.05) 0%, transparent 70%);
 }
 
 .heroDecor2 {
@@ -62,6 +63,7 @@
     bottom: 20%;
     left: 10%;
     animation: pulse 5s ease-in-out infinite 1s;
+    background: radial-gradient(circle, rgba(201, 151, 108, 0.04) 0%, transparent 70%);
 }
 
 .heroDecor3 {
@@ -70,7 +72,28 @@
     top: 30%;
     left: 20%;
     background: rgba(201, 151, 108, 0.05);
-    animation: float 6s ease-in-out infinite;
+    animation: morphGradient 8s ease-in-out infinite;
+}
+
+/* Particle dots */
+.heroDecor4 {
+    width: 8px;
+    height: 8px;
+    top: 25%;
+    right: 30%;
+    background: rgba(201, 151, 108, 0.4);
+    border: none;
+    animation: float 4s ease-in-out infinite;
+}
+
+.heroDecor5 {
+    width: 6px;
+    height: 6px;
+    bottom: 35%;
+    right: 15%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    animation: float 5s ease-in-out infinite 0.5s;
 }
 
 .heroContainer {
@@ -102,16 +125,23 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(201, 151, 108, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 10px 22px;
     border-radius: 999px;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 28px;
     color: var(--gold-light);
-    border: 1px solid rgba(201, 151, 108, 0.25);
+    border: 1px solid rgba(201, 151, 108, 0.2);
     animation: fadeInUp 0.8s var(--ease-out-expo) 0.1s backwards;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(201, 151, 108, 0.4);
 }
 
 .badge span {
@@ -131,6 +161,7 @@
     color: var(--secondary-color);
     display: block;
     font-style: italic;
+    position: relative;
 }
 
 .description {
@@ -195,8 +226,9 @@
     align-items: center;
     gap: 10px;
     padding: 18px 36px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     color: var(--white);
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 999px;
@@ -208,9 +240,10 @@
 }
 
 .btnSecondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.12);
     border-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.08);
 }
 
 /* Stats */
@@ -266,14 +299,15 @@
     height: 550px;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.08);
 }
 
 .heroImageInner::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(10, 25, 41, 0.3) 100%);
+    background: linear-gradient(180deg, transparent 50%, rgba(0, 44, 95, 0.4) 100%);
     z-index: 1;
 }
 
@@ -295,7 +329,7 @@
     left: -16px;
     right: 16px;
     bottom: 16px;
-    border: 2px solid rgba(201, 151, 108, 0.3);
+    border: 2px solid rgba(201, 151, 108, 0.25);
     border-radius: var(--radius-xl);
     pointer-events: none;
     animation: fadeIn 1s var(--ease-out-expo) 0.6s backwards;
@@ -307,21 +341,28 @@
     bottom: 24px;
     left: 24px;
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 16px 24px;
     border-radius: var(--radius);
     display: flex;
     align-items: center;
     gap: 12px;
     z-index: 2;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
     animation: slideUp 0.8s var(--ease-out-expo) 0.8s backwards;
+    transition: all 0.3s ease;
+}
+
+.floatingBadge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.18);
 }
 
 .floatingBadge .icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, var(--secondary-color), var(--gold-accent));
+    background: linear-gradient(135deg, var(--primary-color), var(--navy-light));
     border-radius: 50%;
     display: flex;
     align-items: center;

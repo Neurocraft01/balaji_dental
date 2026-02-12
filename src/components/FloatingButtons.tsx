@@ -40,7 +40,7 @@ const FloatingButtons = () => {
             {/* Call Button */}
             <a
                 href="tel:+919975150505"
-                style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#0D47A1', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', boxShadow: '0 4px 8px rgba(0,0,0,0.2)' }}
+                style={{ width: '60px', height: '60px', borderRadius: '50%', backgroundColor: '#004FA6', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', boxShadow: '0 4px 8px rgba(0,0,0,0.2)' }}
                 aria-label="Call Now"
             >
                 📞
